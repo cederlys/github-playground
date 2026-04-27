@@ -6,7 +6,9 @@ on:
 
 jobs:
   demo2:
-    runs-on: ghcr.io/cederlys/timestamped-docker:latest
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cederlys/timestamped-docker:latest
     steps:
       - name: display time
         run: date
