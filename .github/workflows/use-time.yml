@@ -1,0 +1,14 @@
+name: Test F
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  demo2:
+    runs-on: ghcr.io/cederlys/timestamped-docker:latest
+    steps:
+      - name: display time
+        run: date
+      - name: display image build time
+        run: cat /etc/buildtime
